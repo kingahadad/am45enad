@@ -13,7 +13,7 @@ CORE_NAME, NODE_NAME = "JinX-Core", "JinX-Core"
 # group names (old names are renamed in place, users and templates stay attached)
 PRO_GROUP, STD_GROUP, IP_GROUP = "♛ JinX Royal", "◆ JinX Prime", "◈ JinX Phantom"
 OLD_NAMES = {"pro": ("جینکس پرو",), "std": ("𝗝𝗶𝗻𝗫", "jinx-all"), "ip": ()}
-TITLE = (os.getenv("CONFIG_TITLE") or "جینکس | 𝐒𝐮𝐩𝐞𝐫 𝐉𝐢𝐧𝐗").strip()   # shown after every config name
+TITLE = (os.getenv("CONFIG_TITLE") or "kingez").strip()   # shown after every config name
 GB = 1024 ** 3
 DAY = 86400
 
