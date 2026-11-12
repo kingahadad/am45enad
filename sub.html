@@ -680,6 +680,110 @@ details{border-color:#e6eee8!important}
 }
 </style>
 
+
+<style id="app-choice-dialog-style">
+.app{font-family:inherit;cursor:pointer;border:1px solid #e5ede7;text-align:center;width:100%;color:#314438}
+.app-choice-overlay{position:fixed;inset:0;z-index:70;display:flex;align-items:flex-end;justify-content:center;padding:14px;background:rgba(10,20,14,.42);opacity:0;visibility:hidden;transition:opacity .22s,visibility .22s}
+.app-choice-overlay.on{opacity:1;visibility:visible}
+.app-choice-sheet{position:relative;width:min(100%,390px);padding:25px 18px 18px;border:1px solid #dce9df;border-radius:24px;background:#fff;color:#22352a;box-shadow:0 25px 75px rgba(12,35,20,.23);transform:translateY(18px);transition:transform .25s}
+.app-choice-overlay.on .app-choice-sheet{transform:none}
+.app-choice-close{position:absolute;top:10px;inset-inline-end:12px;width:32px;height:32px;border:0;border-radius:50%;background:#f0f5f1;color:#52645a;font-size:22px;cursor:pointer}
+.app-choice-mark{width:42px;height:42px;display:grid;place-items:center;margin:0 auto 9px;border-radius:13px;background:#edf7f0;color:#168657;font-size:22px;font-weight:900}
+.app-choice-sheet h3{margin:0;text-align:center;font-size:17px;font-weight:900;color:#20392a}
+.app-choice-sheet p{margin:5px 0 16px;text-align:center;color:#7a887f;font-size:12px}
+.app-choice-action{width:100%;min-height:46px;margin-top:8px;display:flex;text-decoration:none;cursor:pointer}
+@media(min-width:761px){.app-choice-overlay{align-items:center}.app-choice-sheet{padding:28px 22px 20px}}
+</style>
+
+
+<style id="app-list-four-client-refinement">
+#apps-card .apps{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:8px!important}
+#apps-card .app{min-width:0}
+#apps-card .app-name{max-width:100%;overflow-wrap:anywhere;text-align:center}
+#apps-card .app-platform{font-size:10px;opacity:.8}
+@media(max-width:480px){#apps-card .apps{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+</style>
+
+
+<style id="king-ezraeil-usage-under-expiry">
+/* Place traffic usage as a full-width vertical section directly beneath expiry countdown. */
+#countdown-card{grid-column:1/-1!important;grid-row:2!important;width:100%!important}
+#usage-card{grid-column:1/-1!important;grid-row:3!important;width:100%!important;align-self:stretch!important}
+#usage-card .h{justify-content:flex-start!important}
+#usage-card .use{display:flex!important;flex-direction:row!important;align-items:center!important;gap:22px!important;width:100%!important}
+#usage-card .ring{width:122px!important;height:122px!important;flex:0 0 122px!important;margin:0!important}
+#usage-card .us{flex:1 1 auto!important;min-width:0!important;display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:10px!important}
+#usage-card .ur{min-height:58px!important;display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;gap:6px!important;padding:11px 13px!important;border-radius:13px!important}
+#usage-card .ur>span{font-size:11px!important;white-space:nowrap!important}
+#usage-card .ur>b{font-size:15px!important}
+#usage-card .bar{width:100%!important;margin-top:14px!important}
+/* Alerts follow the usage panel so the expiry and traffic cards stay together. */
+#alerts{grid-column:1/-1!important;grid-row:4!important;width:100%!important}
+#subscription-card{grid-column:1/5!important;grid-row:5!important}
+#servers-card{grid-column:5/9!important;grid-row:5!important}
+#apps-card{grid-column:9/13!important;grid-row:5!important}
+#guide-card{grid-column:1/7!important;grid-row:6!important}
+#support-card{grid-column:7/13!important;grid-row:6!important}
+.benefit-strip{grid-column:1/13!important;grid-row:7!important}
+.foot{grid-column:1/13!important;grid-row:8!important}
+@media(min-width:761px) and (max-width:1100px){
+ #countdown-card{grid-column:1/7!important;grid-row:2!important}
+ #usage-card{grid-column:1/7!important;grid-row:3!important}
+ #alerts{grid-column:1/7!important;grid-row:4!important}
+ #subscription-card{grid-column:1/4!important;grid-row:5!important}
+ #servers-card{grid-column:4/7!important;grid-row:5!important}
+ #apps-card{grid-column:1/4!important;grid-row:6!important}
+ #guide-card{grid-column:4/7!important;grid-row:6!important}
+ #support-card{grid-column:1/7!important;grid-row:7!important}
+ .benefit-strip{grid-column:1/7!important;grid-row:8!important}
+ .foot{grid-column:1/7!important;grid-row:9!important}
+}
+@media(max-width:760px){
+ #hero{grid-column:1!important;grid-row:1!important}
+ #profile-card{grid-column:1!important;grid-row:2!important}
+ #countdown-card{grid-column:1!important;grid-row:3!important}
+ #usage-card{grid-column:1!important;grid-row:4!important}
+ #alerts{grid-column:1!important;grid-row:5!important}
+ #subscription-card{grid-column:1!important;grid-row:6!important}
+ #servers-card{grid-column:1!important;grid-row:7!important}
+ #apps-card{grid-column:1!important;grid-row:8!important}
+ #guide-card{grid-column:1!important;grid-row:9!important}
+ #support-card{grid-column:1!important;grid-row:10!important}
+ .benefit-strip{grid-column:1!important;grid-row:11!important}
+ .foot{grid-column:1!important;grid-row:12!important}
+ #usage-card .use{flex-direction:column!important;align-items:stretch!important;gap:14px!important}
+ #usage-card .ring{width:112px!important;height:112px!important;flex:0 0 112px!important;align-self:center!important}
+ #usage-card .us{width:100%!important;grid-template-columns:1fr!important;gap:7px!important}
+ #usage-card .ur{min-height:47px!important;flex-direction:row!important;align-items:center!important;justify-content:space-between!important;padding:9px 12px!important}
+ #usage-card .ur>span{font-size:12px!important}
+ #usage-card .ur>b{font-size:14px!important}
+ #usage-card .bar{margin-top:12px!important}
+}
+</style>
+
+
+<style id="lion-cursor-follow-effect">
+/* Subtle 3D cursor-follow effect for the lion artwork. */
+#hero{perspective:1100px;perspective-origin:50% 42%}
+#hero .lion-art{
+  transform:translate3d(var(--lion-x,0px),var(--lion-y,0px),0)
+    rotateX(var(--lion-rx,0deg)) rotateY(var(--lion-ry,0deg))
+    scale(var(--lion-scale,1.025))!important;
+  transform-origin:50% 42%!important;
+  backface-visibility:hidden;
+  will-change:transform;
+  transition:transform .52s cubic-bezier(.2,.75,.25,1);
+}
+#hero.is-lion-hover .lion-art{transition:transform .14s ease-out}
+@media(max-width:760px){
+  #hero{perspective:none}
+  #hero .lion-art{transform:scale(1.01)!important;transition:none!important;will-change:auto}
+}
+@media(prefers-reduced-motion:reduce){
+  #hero .lion-art{transform:none!important;transition:none!important;will-change:auto}
+}
+</style>
+
 </head>
 <body>
 <div class="aur"></div><canvas aria-hidden="true" id="fx"></canvas>
@@ -770,7 +874,7 @@ details{border-color:#e6eee8!important}
 <div class="ping"><div class="rad" id="rad"><span></span><b>LIVE</b></div>
 <div class="pv"><div class="n ltr" id="pms">--<small>ms</small></div><div class="q" id="pq"></div></div>
 <div class="sig" id="sig"><i style="height:30%"></i><i style="height:55%"></i><i style="height:78%"></i><i style="height:100%"></i></div></div>
-</section><a class="profile-renew" href="https://t.me/king_ezraeil" rel="noopener" target="_blank"><span>تمدید اشتراک</span><b>♛</b></a><span class="hide" id="leftD"></span></div></div><section class="card rv app-panel" id="apps-card">
+</section><span class="hide" id="leftD"></span></div></div><section class="card rv app-panel" id="apps-card">
 <div class="h"><span class="ic"><svg height="16" width="16"><use href="#i-touch"></use></svg></span><span data-t="appsT"></span></div>
 <div class="apps" id="apps"></div>
 </section><section class="card rv guide-panel" id="guide-card">
@@ -781,7 +885,8 @@ details{border-color:#e6eee8!important}
 <div><b data-t="tgT"></b><small data-t="tgS"></small></div>
 <svg class="go fl" height="20" width="20"><use href="#i-arrow"></use></svg>
 </a></aside></div>
-<div class="dock" id="dock"><a class="btn" href="#" id="quick"><svg height="18" width="18"><use href="#i-bolt2"></use></svg><span id="quickT"></span></a></div>
+<div class="dock" id="dock"><a class="btn" href="#appChoice" id="quick" aria-label="اتصال سریع"><svg height="18" width="18"><use href="#i-bolt2"></use></svg><span id="quickT"></span></a></div>
+<div class="app-choice-overlay" id="appChoice" aria-hidden="true"><div class="app-choice-sheet" role="dialog" aria-modal="true" aria-labelledby="appChoiceTitle"><button type="button" class="app-choice-close" id="appChoiceClose" aria-label="Close">×</button><div class="app-choice-mark">↗</div><h3 id="appChoiceTitle"></h3><p id="appChoiceSub"></p><a class="btn app-choice-action" id="appDownload" href="#" target="_blank" rel="noopener noreferrer"><svg width="17" height="17"><use href="#i-save"></use></svg><span data-t="appDownload"></span></a><button class="btn gh app-choice-action" id="appCopy" type="button"><svg width="17" height="17"><use href="#i-copy"></use></svg><span data-t="appCopy"></span></button></div></div>
 <div aria-hidden="true" class="ov" id="ov"><div aria-modal="true" class="sheet" role="dialog">
 <h3 id="shT"></h3>
 <div class="qr"><canvas height="500" id="qrc2" width="500"></canvas></div>
@@ -973,29 +1078,25 @@ var $=function(i){return document.getElementById(i)};
 var NL=String.fromCharCode(10);
 var T={
  fa:{tag:"اشتراک اختصاصی شما",exp:"تاریخ انقضا",left:"زمان باقی‌مانده",useT:"مصرف حجم",used:"مصرف شده",sUsed:"مصرف شده",sLeft:"باقی‌مانده",sAll:"کل حجم",
-  pingT:"پینگ تا سرور",retest:"تست دوباره",subT:"لینک اشتراک",copy:"کپی",save:"ذخیره عکس",close:"بستن",qr:"QR کد",all:"کپی همه",appsT:"اتصال با یک لمس",rec:"پیشنهادی",recWin:"پیشنهاد ویندوز",recAndroid:"پیشنهاد اندروید",quickWin:"کپی اشتراک و راه‌اندازی PattN",quickAndroid:"اتصال سریع با PattNG",quickCopiedWin:"لینک اشتراک کپی شد؛ آن را داخل PattN وارد و به‌روزرسانی کن.",
+  pingT:"پینگ تا سرور",retest:"تست دوباره",subT:"لینک اشتراک",copy:"کپی",save:"ذخیره عکس",close:"بستن",qr:"QR کد",all:"کپی همه",appsT:"اتصال با یک لمس",rec:"پیشنهادی",recWin:"پیشنهاد ویندوز",recAndroid:"پیشنهاد اندروید",quickWin:"اتصال سریع",quickAndroid:"اتصال سریع",quickCopiedWin:"لینک اشتراک کپی شد.",appDownload:"دانلود از منبع رسمی",appCopy:"کپی اشتراک",appChoose:"روش موردنظر را انتخاب کن",
   cfgT:"کانفیگ‌ها",cfgN:" کانفیگ",helpT:"آموزش اتصال",tgT:"پشتیبانی",tgS:"ارتباط مستقیم با پشتیبانی در تلگرام",copied:"کپی شد",copiedAll:"همه کانفیگ‌ها کپی شد",
   copyFail:"کپی نشد، دستی کپی کن",saved:"عکس QR ذخیره شد",unl:"نامحدود",unlS:"حجم نامحدود",day:" روز",hr:" ساعت",none:"ندارد",
   active:"فعال",on_hold:"منتظر اولین اتصال",soon:"رو به اتمام",expired:"منقضی",limited:"حجم تمام",disabled:"غیرفعال",quick:"اتصال سریع با ",
   q:["عالی","خیلی خوب","خوب","معمولی","ضعیف"],testing:"در حال تست...",noResp:"بدون پاسخ، دوباره بزن",
   wBad:"اشتراک شما {s} شده. برای تمدید به پشتیبانی پیام بده.",wDays:"فقط {n} روز تا پایان اشتراک مونده.",wHours:"کمتر از یک روز تا پایان اشتراک مونده.",wData:"{n}% از حجم مصرف شده.",
   empty:"کانفیگی برای نمایش نیست. لینک اشتراک رو به اپ اضافه کن و یه بار آپدیتش کن.",
-  h:[["PattNG (اندروید)","PattNG رو نصب کن. دکمه اتصال سریع، لینک اشتراک رو مستقیماً به برنامه می‌فرسته. اگر برنامه باز نشد، PattNG رو از بخش اپلیکیشن‌ها نصب کن و دوباره امتحان کن."],
-     ["PattN (ویندوز)","PattN رو نصب و اجرا کن. دکمه راه‌اندازی PattN لینک اشتراک رو کپی و صفحه نسخه‌های رسمی رو باز می‌کنه؛ لینک رو داخل PattN وارد و اشتراک رو به‌روزرسانی کن."],
-     ["پینگ قرمزه ولی وصل میشه؟","کاملا عادیه. توی تنظیمات اپ آدرس تست رو بذار روی <code>http://cp.cloudflare.com/generate_204</code> و از تست Real Delay استفاده کن تا عدد واقعی رو ببینی."],
-     ["کانفیگ وصل نمیشه؟","اول اشتراک رو توی اپ آپدیت کن. اگه درست نشد، یه کانفیگ دیگه از لیست رو امتحان کن یا توی پشتیبانی تلگرام بهمون خبر بده."]]},
+  h:[["۱. Android · PattNG / V2Ray","۱) PattNG یا V2Ray را از بخش «اتصال با یک لمس» و گزینه «دانلود از منبع رسمی» نصب کن. ۲) روی همان برنامه بزن و «کپی اشتراک» را انتخاب کن. ۳) برنامه را باز کن، اشتراک را از کلیپ‌بورد اضافه کن و Update را بزن. برای PattNG می‌توانی از دکمه افزودن مستقیم اشتراک هم استفاده کنی."],
+     ["۲. iOS · V2Box","۱) V2Box را از App Store نصب کن. ۲) در پنل، روی V2Box بزن و «کپی اشتراک» را انتخاب کن. ۳) داخل V2Box از بخش Configs علامت + و گزینه Add Subscription را بزن، لینک را وارد و ذخیره کن؛ سپس اتصال را فعال کن."]]},
  en:{tag:"Your private subscription",exp:"Expires",left:"Time left",useT:"Data usage",used:"used",sUsed:"Used",sLeft:"Remaining",sAll:"Total",
-  pingT:"Ping to server",retest:"Retest",subT:"Subscription link",copy:"Copy",save:"Save image",close:"Close",qr:"QR code",all:"Copy all",appsT:"One-tap connect",rec:"Best",recWin:"Windows pick",recAndroid:"Android pick",quickWin:"Copy subscription & open PattN",quickAndroid:"Quick connect with PattNG",quickCopiedWin:"Subscription link copied. Import it in PattN and update the subscription.",
+  pingT:"Ping to server",retest:"Retest",subT:"Subscription link",copy:"Copy",save:"Save image",close:"Close",qr:"QR code",all:"Copy all",appsT:"One-tap connect",rec:"Recommended",recWin:"Windows pick",recAndroid:"Android pick",quickWin:"Quick connect",quickAndroid:"Quick connect",quickCopiedWin:"Subscription link copied.",appDownload:"Download from official source",appCopy:"Copy subscription",appChoose:"Choose an action",
   cfgT:"Configs",cfgN:" configs",helpT:"How to connect",tgT:"Support",tgS:"Contact support directly on Telegram",copied:"Copied",copiedAll:"All configs copied",
   copyFail:"Could not copy, copy it by hand",saved:"QR image saved",unl:"Unlimited",unlS:"Unlimited data",day:" days",hr:" hours",none:"None",
   active:"Active",on_hold:"Waiting for first use",soon:"Ending soon",expired:"Expired",limited:"Data used up",disabled:"Disabled",quick:"Quick connect with ",
   q:["Excellent","Very good","Good","Fair","Weak"],testing:"Testing...",noResp:"No answer, tap retest",
   wBad:"Your subscription is {s}. Message the channel to renew.",wDays:"Only {n} days left on your subscription.",wHours:"Less than a day left on your subscription.",wData:"{n}% of your data is used.",
   empty:"No configs to show yet. Add the subscription link to your app and update it once.",
-  h:[["PattNG (Android)","Install PattNG. The quick-connect button sends your subscription link directly to the app. If the app does not open, install PattNG from the Apps section and try again."],
-     ["PattN (Windows)","Install and open PattN. The PattN setup button copies your subscription link and opens the official releases page; import the link in PattN and update the subscription."],
-     ["Red ping but it connects?","That is normal. Set the app test URL to <code>http://cp.cloudflare.com/generate_204</code> and use Real Delay to see the true number."],
-     ["A config does not connect?","Update the subscription in the app first. If it still fails, try another config from the list or contact us through Telegram support."]]}
+  h:[["1. Android · PattNG / V2Ray","1) Install PattNG or V2Ray from the official source using the app card. 2) Select the app and choose Copy subscription. 3) Open the app, import the subscription from the clipboard, then update it. PattNG may also support direct subscription import."],
+     ["2. iOS · V2Box","1) Install V2Box from the App Store. 2) Select V2Box in the dashboard and choose Copy subscription. 3) In V2Box, open Configs, tap +, choose Add Subscription, paste the link, save, and connect."]]}
 };
 var lang="fa";
 try{lang=localStorage.getItem("jx-lang")||""}catch(e){}
@@ -1015,9 +1116,12 @@ var sub=location.origin+location.pathname.replace(/\/+$/,"").replace(/\/(info|us
 var links=(Array.isArray(D.links)?D.links:[]).map(function(l){return String(l||"").trim()}).filter(function(l){return /^[a-z0-9+.-]+:\/\//i.test(l)});
 var ua=navigator.userAgent||"";
 var IS_ANDROID=/Android/i.test(ua),IS_WINDOWS=/Windows NT|Win32|Win64|Windows/i.test(ua);
-var REC=IS_ANDROID?"PattNG":(IS_WINDOWS?"PattN":"");
-var PATTN_RELEASES="https://github.com/patterniha/PattN";
-var PATTNG_RELEASES="https://github.com/patterniha/PattNG";
+var REC=IS_ANDROID?"PattNG":(IS_WINDOWS?"PattN":""); // quick-connect recommends PattNG on Android and PattN on Windows
+var PATTN_RELEASES="https://github.com/patterniha/PattN/releases/latest";
+var PATTNG_RELEASES="https://github.com/patterniha/PattNG/releases/latest";
+var V2RAY_RELEASES="https://github.com/2dust/v2rayNG/releases/latest";
+var V2RAYN_RELEASES="https://github.com/2dust/v2rayN/releases/latest";
+var V2BOX_STORE="https://apps.apple.com/app/v2box-v2ray-client/id6446814690";
 
 function parse(l){
  var proto=((/^([a-z0-9+.-]+):\/\//i.exec(l)||[])[1]||"").toLowerCase(),name="",q={};
@@ -1043,10 +1147,28 @@ function parse(l){
 var CFG=links.map(parse);
 
 function appUrl(n){var u=encodeURIComponent(sub),nm=encodeURIComponent("King Ezraeil");
- return {PattNG:"v2rayng://install-sub?url="+u+"&name="+nm,V2Box:"v2box://install-sub?url="+u+"&name="+nm,v2rayNG:"v2rayng://install-sub?url="+u+"&name="+nm,Hiddify:"hiddify://import/"+sub+"#"+nm,
-  Streisand:"streisand://import/"+sub+"#"+nm,Happ:"happ://add/"+sub,NekoBox:"sn://subscription?url="+u+"&name="+nm}[n]}
-function appCardUrl(n){return n==="PattN"?PATTN_RELEASES:n==="PattNG"?PATTNG_RELEASES:appUrl(n)}
-var APPS=[["PattN","#168653","#0b4d30","PN","Windows / Desktop"],["PattNG","#15915a","#0c5a35","P","Android"],["V2Box","#3b82f6","#1e3a8a","V","iOS / Android"],["v2rayNG","#22c55e","#14532d","N","Android"],["Hiddify","#a855f7","#4c1d95","H","Multi-platform"],["Streisand","#06b6d4","#164e63","S","iOS"],["Happ","#f59e0b","#78350f","Hp","Multi-platform"],["NekoBox","#ec4899","#831843","K","Android"]];
+ return {PattNG:"v2rayng://install-sub?url="+u+"&name="+nm,V2Box:"v2box://install-sub?url="+u+"&name="+nm,v2rayNG:"v2rayng://install-sub?url="+u+"&name="+nm}[n]}
+var APP_INFO={
+ v2rayNG:{title:"V2Ray",platform:"Android",source:V2RAY_RELEASES},
+ v2rayN:{title:"V2RayN",platform:"Windows",source:V2RAYN_RELEASES},
+ PattN:{title:"Patt",platform:"Windows",source:PATTN_RELEASES,recommended:"windows"},
+ PattNG:{title:"Patt",platform:"Android",source:PATTNG_RELEASES,recommended:"android"},
+ V2Box:{title:"V2Box",platform:"iOS",source:V2BOX_STORE}
+};
+var APPS=[
+ ["v2rayNG","#22c55e","#14532d","V","Android"],
+ ["v2rayN","#16a34a","#14532d","V","Windows"],
+ ["PattN","#168653","#0b4d30","P","Windows"],
+ ["PattNG","#15915a","#0c5a35","P","Android"],
+ ["V2Box","#3b82f6","#1e3a8a","V","iOS"]
+];
+function appCardUrl(n){return (APP_INFO[n]||{}).source||"#"}
+function openAppChoice(name){var info=APP_INFO[name];if(!info)return;var modal=$("appChoice"),title=$("appChoiceTitle"),subline=$("appChoiceSub"),dl=$("appDownload"),cp=$("appCopy");
+ title.textContent=info.title+(info.recommended?" · "+(info.recommended==="windows"?L().recWin:L().recAndroid):"");
+ subline.textContent=info.platform+" · "+L().appChoose;dl.href=info.source;dl.setAttribute("aria-label",L().appDownload+" "+info.title);cp.dataset.appCopy="1";
+ modal.classList.add("on");modal.setAttribute("aria-hidden","false");document.body.classList.add("lock");buzz();
+}
+function closeAppChoice(){var modal=$("appChoice");if(!modal)return;modal.classList.remove("on");modal.setAttribute("aria-hidden","true");document.body.classList.remove("lock")}
 
 function state(){var now=Date.now()/1000;
  if(status==="disabled")return["bad","disabled"];if(status==="expired"||(expire&&expire<now))return["bad","expired"];
@@ -1086,14 +1208,12 @@ function render(){
  else if(!unl&&pct>=85){w.className="note warn rv on";ws.textContent=l.wData.replace("{n}",num(pct,0))}
  if(D.announce){$("ann").className="note info rv on";$("ann").querySelector("span").textContent=String(D.announce)}
  $("apps").innerHTML=APPS.map(function(a){
-  var rec=a[0]==="PattN"||a[0]==="PattNG";
-  var recLabel=a[0]==="PattN"?l.recWin:a[0]==="PattNG"?l.recAndroid:"";
-  var platform=a[4]||"";
-  var external=a[0]==="PattN"||a[0]==="PattNG";
-  return '<a class="app'+(rec?" rec":"")+'" href="'+esc(appCardUrl(a[0]))+'"'+(external?' target="_blank" rel="noopener noreferrer"':'')+'>'+
-   (rec?'<span class="tag">'+esc(recLabel)+'</span>':"")+
+  var info=APP_INFO[a[0]],rec=!!info.recommended;
+  var recLabel=info.recommended==="windows"?l.recWin:info.recommended==="android"?l.recAndroid:"";
+  return '<button type="button" class="app'+(rec?" rec":"")+'" data-app="'+esc(a[0])+'">'+
+   (rec?'<span class="tag">'+esc(recLabel)+'</span>':"")+ 
    '<span class="ai" style="background:linear-gradient(140deg,'+a[1]+','+a[2]+')">'+a[3]+'</span>'+
-   '<span class="app-name">'+esc(a[0])+'</span><small class="app-platform">'+esc(platform)+'</small></a>'
+   '<span class="app-name">'+esc(info.title)+'</span><small class="app-platform">'+esc(info.platform)+'</small></button>'
  }).join("");
  $("cfgN").textContent=CFG.length+l.cfgN;$("pNet").textContent=CFG.length+" CONFIGS";
  if(!CFG.length){$("cfgs").innerHTML='<div class="empty">'+esc(l.empty)+"</div>";$("cpAll").classList.add("hide")}
@@ -1103,9 +1223,9 @@ function render(){
  if(!REC){dock.classList.add("hide");$("quick").removeAttribute("href");$("quick").dataset.quickApp="";}
  else{
   dock.classList.remove("hide");
-  $("quick").href=REC==="PattN"?PATTN_RELEASES:appUrl("PattNG");
+  $("quick").href="#appChoice";
   $("quick").dataset.quickApp=REC;
-  $("quickT").textContent=REC==="PattN"?l.quickWin:l.quickAndroid;
+  $("quickT").textContent=l.quick;
  }
  if(PING.v!==undefined)paintPing();else $("pq").textContent=l.testing;
 }
@@ -1144,6 +1264,10 @@ function saveQr(){var c=$("qrc2");try{c.toBlob(function(b){if(!b)throw 0;var u=U
 document.addEventListener("click",function(e){
  var t=e.target;if(!t.closest)return;
  var quick=t.closest("#quick");
+ if(quick&&quick.dataset.quickApp){e.preventDefault();openAppChoice(quick.dataset.quickApp);return;}
+ var app=t.closest("[data-app]");if(app){e.preventDefault();openAppChoice(app.getAttribute("data-app"));return;}
+ if(t.closest("#appCopy")){copy(sub,L().copied,t.closest("#appCopy"),e);closeAppChoice();return;}
+ if(t.closest("#appChoiceClose")||t.id==="appChoice"){closeAppChoice();return;}
  if(quick&&quick.dataset.quickApp==="PattN"){
   e.preventDefault();
   copy(sub,L().quickCopiedWin,null,e);
@@ -1171,7 +1295,7 @@ document.addEventListener("click",function(e){
  if(t.closest("#shSave")){saveQr();return}
  if(t.closest("#shX")||t.id==="ov"){closeSheet();return}
 });
-document.addEventListener("keydown",function(e){if(e.key==="Escape")closeSheet()});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"){closeSheet();closeAppChoice()}});
 document.addEventListener("pointerdown",function(e){var b=e.target.closest&&e.target.closest(".btn");if(!b||reduce)return;var r=b.getBoundingClientRect(),s=document.createElement("span"),d=Math.max(r.width,r.height);
  s.className="rp";s.style.cssText="width:"+d+"px;height:"+d+"px;left:"+(e.clientX-r.left-d/2)+"px;top:"+(e.clientY-r.top-d/2)+"px";b.appendChild(s);setTimeout(function(){s.remove()},650)},{passive:true});
 
@@ -1227,6 +1351,52 @@ if(document.readyState==="complete")setTimeout(start,500);else{var go=false,s1=f
   put('sideStatus',stateText);
   // Scroll navigation and active menu state.
   document.querySelectorAll('.side-nav a').forEach(function(a){a.addEventListener('click',function(){document.querySelectorAll('.side-nav a').forEach(function(x){x.classList.remove('active')});a.classList.add('active')})});
+})();
+</script>
+
+
+<script id="lion-cursor-follow-script">
+(function(){
+  "use strict";
+  var hero=document.getElementById("hero");
+  if(!hero || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  var art=hero.querySelector(".lion-art");
+  if(!art || !window.matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+  var raf=0, targetX=0, targetY=0;
+  function paint(){
+    raf=0;
+    hero.style.setProperty("--lion-x", targetX.toFixed(2)+"px");
+    hero.style.setProperty("--lion-y", targetY.toFixed(2)+"px");
+    /* Small yaw/pitch angles create a gentle head-following illusion without distorting the artwork. */
+    hero.style.setProperty("--lion-ry", (targetX/12*3.2).toFixed(2)+"deg");
+    hero.style.setProperty("--lion-rx", (-targetY/9*2.4).toFixed(2)+"deg");
+    hero.style.setProperty("--lion-scale", "1.035");
+  }
+  hero.addEventListener("pointerenter",function(e){
+    if(e.pointerType!=="mouse") return;
+    hero.classList.add("is-lion-hover");
+  },{passive:true});
+  hero.addEventListener("pointermove",function(e){
+    if(e.pointerType!=="mouse") return;
+    var r=hero.getBoundingClientRect();
+    var nx=Math.max(0,Math.min(1,(e.clientX-r.left)/r.width));
+    var ny=Math.max(0,Math.min(1,(e.clientY-r.top)/r.height));
+    targetX=(nx-.5)*12;
+    targetY=(ny-.42)*9;
+    if(!raf) raf=requestAnimationFrame(paint);
+  },{passive:true});
+  function reset(){
+    hero.classList.remove("is-lion-hover");
+    targetX=0;targetY=0;
+    if(raf){cancelAnimationFrame(raf);raf=0;}
+    hero.style.setProperty("--lion-x","0px");
+    hero.style.setProperty("--lion-y","0px");
+    hero.style.setProperty("--lion-rx","0deg");
+    hero.style.setProperty("--lion-ry","0deg");
+    hero.style.setProperty("--lion-scale","1.025");
+  }
+  hero.addEventListener("pointerleave",reset,{passive:true});
+  hero.addEventListener("pointercancel",reset,{passive:true});
 })();
 </script>
 
